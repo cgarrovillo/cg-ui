@@ -1,9 +1,8 @@
 import React from 'react'
-import { createTheme, ThemeProvider } from '@mui/system'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 export const theme = createTheme({
   palette: {
-    mode: 'dark',
     primary: {
       main: '#001e3c',
     },

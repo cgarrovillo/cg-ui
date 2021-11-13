@@ -1,25 +1,12 @@
-// import CGThemeProvider from '../src/theme'
+import React from 'react'
 
-import { createTheme, ThemeProvider as MThemeProvider } from '@mui/system'
-import { ThemeProvider } from '@emotion/react'
-
-export const theme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#001e3c',
-    },
-  },
-  typography: {
-    fontSize: 36,
-  },
-})
+import CGThemeProvider from '../src/theme'
 
 export const decorators = [
   (Story) => (
-    <MThemeProvider theme={theme}>
-      <ThemeProvider theme={theme}>{Story()}</ThemeProvider>
-    </MThemeProvider>
+    <React.StrictMode>
+      <CGThemeProvider>{Story()}</CGThemeProvider>
+    </React.StrictMode>
   ),
 ]
 
