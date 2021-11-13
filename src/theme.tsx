@@ -1,6 +1,7 @@
 import React from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import './fonts/PlusJakartaSans.css'
+// import './fonts/PlusJakartaSans.css' // 142ms~
+import '@fontsource/plus-jakarta-sans'
 
 export const theme = createTheme({
   palette: {
