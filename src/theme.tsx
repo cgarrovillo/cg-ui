@@ -1,4 +1,4 @@
-import React from 'react'
+import { CssBaseline } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 // import './fonts/PlusJakartaSans.css' // 142ms~
 import '@fontsource/plus-jakarta-sans'
@@ -24,13 +24,21 @@ export const theme = createTheme({
       '"Segoe UI Symbol"',
     ].join(','),
   },
+  shape: {
+    borderRadius: 8,
+  },
 })
 
 type Props = {
   children: React.ReactNode
 }
 const CGThemeProvider = ({ children }: Props) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
+  )
 }
 
 export default CGThemeProvider

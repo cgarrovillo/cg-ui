@@ -1,4 +1,3 @@
-import React from 'react'
 import { Button as MButton, ButtonProps } from '@mui/material'
 
 /**
